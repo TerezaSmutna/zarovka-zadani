@@ -4,15 +4,15 @@ export const Bulb = (props) => {
   let isOnClass = 'bulb';
   if (isOn) {
     isOnClass = 'bulb--on';
-  } 
+  }
   const element = document.createElement('div');
+  element.classList.add('bulb');
   element.classList.add(isOnClass);
 
-  /*element.addEventListener('click', () => {
-    element.replaceWith(Bulb({ 
+  element.addEventListener('click', () => {
+    element.replaceWith(Bulb({
       isOn: !isOn,
     }));
-  });*/
+  });
   return element;
-
 }
